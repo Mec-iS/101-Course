@@ -1,0 +1,14 @@
+#### Going to develop with GAE
+1. To run a GAE development server you need to have **Python** (or any of the other supported programming languages) installed. GAE by now works perfectly with any [version 2.7+ of Python](http://www.python.org/getit/). Set up your Python, there are a lot of docs and tutorials around.
+
+2. Download and Install the [GAE development kit](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python) in a directory fitting your preference, if you want the SDK commands to be accessible from your projects' directory you should add it to the list of your environment's variables.
+
+3. Login with your google account and go to [App Engine Console](https://appengine.google.com/). Create your app finding an available name. The app's domain will be choose-your-name.appspot.com That's the address where your app will be published. 
+
+4. You can find a *new_project_template* dir, in you SDK directory. You can copy and paste it anywhere to have a starting framework for your GAE project. Those files are the real basic files for a GAE app:
+
+	* *app.yaml* is where the basic settings for the app are stored, the GAE's runtime environment looks for this file any time is run. 
+
+	* *index.yaml* is where datastore indexes are defined, you can forget about it by now, cause GAE will write it for you. You will need to edit it only when the app will be asked to perform quite complex datastore operations.
+
+	* *main.py* is where the big part of the job is made. All you app's code will be written into or loaded by this file. 

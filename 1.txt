@@ -1,0 +1,18 @@
+#### **Google App Engine** is a [Platform as a Service](http://en.wikipedia.org/wiki/Platform_as_a_service).
+
+Google provides all the tools you need, from the hardware to the top-stack, to host and develop your apps, all wrapped into a service that take a shape of a platform (or something you can use to found your work over).
+
+GAE is free for any basic/learning usage you would like. The pricing is **0$ under defined quotas**, over these level of usage you are going to pay the resource based on time or number of request. Free of charge quotas are quite enough for low-traffic site, and more than enough for learning purpose. You can also just decide to avoid your app serving when it receives requests exceeding the free quotas. Check the [quotas](https://developers.google.com/appengine/docs/quotas) and [pricing](https://developers.google.com/appengine/pricing) before starting to be sure about what you get. 
+
+As far as I know GAE is a good service, and helped me to start my own activity without getting mad about sys-administration.
+
+GAE runs by mean of:
+
+* A *runtime environment* (or more rudely a 'sandbox'). A kind of place on top of the hardware+software stack where the things you program run and do the job they have been programmed for. With GAE you have the same environment running remotely on the Google cloud but you, also, can run your local environment on your computer for testing/developing purpose. Any time you would like to make your app public and accessible from the Internet you will need to deploy it through the App Engine tools, from your computer to the cloud by the [App Engine SDK](https://developers.google.com/appengine/downloads)  
+
+* By the Runtime Environment you can develop for, access and use many kinds of different services useful for your apps, the main [GAE's available features](https://developers.google.com/appengine/features/#generally_available_ga_features) are:
+	* the Static File Server - to serve your javascript, css or images (one of the main security rule of GAE is that you cannot write on the filesystem of the machine running the app, but GAE provide a lot of nice feature to make you avoid doing this, like datastore and cache memory)
+	* the Datastore - GAE lets you use the power and scalability of Big Tables, the database where Google services lay on. It's my favourite part of the platform, and its accessibility and speed is wonderful. It can be used as a full features Object Oriented datastore.
+	* Services - GAE is fully integrated with any of the services accessible by Google APIs, with the rules defined for GAE. The list of Google available APIs can be found in your Google [APIs control panel](http://code.google.com/apis/console). 
+
+You can access also your [App Engine Console](https://appengine.google.com/) inside cloud services website *to control how your apps are working*, or to create a new app. One of the nice parts is that you dont need to set up your own server like Amazon AWS or any other VPS or Computing provider, you just need to get in touch with 
