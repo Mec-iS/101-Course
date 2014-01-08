@@ -1,9 +1,0 @@
-Inspecting a website through Chrome development tools
-
-Python console 
-
-Creating a Python module
-
-Python in App Engine
-
-Hello World App Engine
