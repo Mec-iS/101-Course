@@ -15,8 +15,8 @@ To know a little more about Python you can read this really great articles:
 
 I just find Python to be more productive and fit for solo developing, easy to find docs and examples, and really tuned to OpenSource community. A lot of free books can be found on the Internet, to learn to be a better Python programmer. It is also proved that Python is the most [newbie-friendly programming language](http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program)... probably (:
 
-<br/>
 ---
+<br/>
 
 ## **Google App Engine** is a [Platform as a Service](http://en.wikipedia.org/wiki/Platform_as_a_service).
 
@@ -37,6 +37,7 @@ GAE runs by mean of:
 
 You can access also your [App Engine Console](https://appengine.google.com/) inside cloud services website *to control how your apps are working*, or to create a new app. One of the nice parts is that you dont need to set up your own server like Amazon AWS or any other VPS or Computing provider, you just need to get in touch with 
 
+---
 <br/>
 
 ## Going to develop with GAE
