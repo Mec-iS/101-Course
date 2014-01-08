@@ -53,6 +53,7 @@ You can access also your [App Engine Console](https://appengine.google.com/) ins
 	* *index.yaml* is where datastore indexes are defined, you can forget about it by now, cause GAE will write it for you. You will need to edit it only when the app will be asked to perform quite complex datastore operations.
 
 	* *main.py* is where the big part of the job is made. All you app's code will be written into or loaded by this file. 
+
 ---    
 <br/>
 
