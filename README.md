@@ -1,8 +1,9 @@
-##Welcome!
-
+#Welcome!
+----
 We are here to let you folks get in touch with Google App Engine (since now GAE), a developer-friendly environment to design and realize apps powered by Google hosting/computing services, Big Table database, and other Google goodies.
-
+<br/>
 The GAE's presentation as Google Cloud service [here](https://developers.google.com/appengine/). All the docs are accessible from the left-side menu.
+<br/>
 
 As you can see, you can develop with GAE by two stable developing environment: Java and Python. And two experimental one: PHP, Go. This doc will focus on Python developing, as the author thinks it's the most enjoyable of the four.
 
@@ -14,9 +15,10 @@ To know a little more about Python you can read this really great articles:
 
 I just find Python to be more productive and fit for solo developing, easy to find docs and examples, and really tuned to OpenSource community. A lot of free books can be found on the Internet, to learn to be a better Python programmer. It is also proved that Python is the most [newbie-friendly programming language](http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program)... probably (:
 
+<br/>
+---
 
-
-#### **Google App Engine** is a [Platform as a Service](http://en.wikipedia.org/wiki/Platform_as_a_service).
+## **Google App Engine** is a [Platform as a Service](http://en.wikipedia.org/wiki/Platform_as_a_service).
 
 Google provides all the tools you need, from the hardware to the top-stack, to host and develop your apps, all wrapped into a service that take a shape of a platform (or something you can use to found your work over).
 
@@ -35,8 +37,9 @@ GAE runs by mean of:
 
 You can access also your [App Engine Console](https://appengine.google.com/) inside cloud services website *to control how your apps are working*, or to create a new app. One of the nice parts is that you dont need to set up your own server like Amazon AWS or any other VPS or Computing provider, you just need to get in touch with 
 
+<br/>
 
-#### Going to develop with GAE
+## Going to develop with GAE
 1. To run a GAE development server you need to have **Python** (or any of the other supported programming languages) installed. GAE by now works perfectly with any [version 2.7+ of Python](http://www.python.org/getit/). Set up your Python, there are a lot of docs and tutorials around.
 
 2. Download and Install the [GAE development kit](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python) in a directory fitting your preference, if you want the SDK commands to be accessible from your projects' directory you should add it to the list of your environment's variables.
@@ -50,8 +53,9 @@ You can access also your [App Engine Console](https://appengine.google.com/) ins
 	* *index.yaml* is where datastore indexes are defined, you can forget about it by now, cause GAE will write it for you. You will need to edit it only when the app will be asked to perform quite complex datastore operations.
 
 	* *main.py* is where the big part of the job is made. All you app's code will be written into or loaded by this file. 
-    
-    
+---    
+<br/>
+
 ## Start Learning Programming
 
 ### Vocabulary
@@ -117,7 +121,7 @@ SIMPLE_TYPES = (int, long, float, boolean, string, double)
 
 ### An Example Of Common Data Structure For The Web
 
-A very popular data structure used in server-client communications is [JSON](http://en.wikipedia.org/wiki/JSON): "an open standard format that uses human-readable text to transmit data objects consisting of attribute�value pairs." 
+A very popular data structure used in server-client communications is [JSON](http://en.wikipedia.org/wiki/JSON): "an open standard format that uses human-readable text to transmit data objects consisting of attribute-value pairs." 
 
 We introduce here this kind of data formatting for web-transmissions by presenting a JSON implementation for geolocating and draw over maps: [GEOjson](http://geojson.org/). Here an example of JSON used for this purpose:
 ```
@@ -138,10 +142,7 @@ We introduce here this kind of data formatting for web-transmissions by presenti
       ]
 }
 ```
-
-
-
-Inspecting a website through Chrome development tools
+---
 
 Python console 
 
