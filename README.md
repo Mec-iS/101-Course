@@ -15,6 +15,12 @@ To know a little more about Python you can read this really great articles:
 
 I just find Python to be more productive and fit for solo developing, easy to find docs and examples, and really tuned to OpenSource community. A lot of free books can be found on the Internet, to learn to be a better Python programmer. It is also proved that Python is the most [newbie-friendly programming language](http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program)... probably (:
 
+This course is based on the experience made with:
+
+* [Udacity CS253 course](https://www.udacity.com/course/cs253)
+* [Programming Google App Engine second edition](http://shop.oreilly.com/product/9780596522735.do)
+
+Thanks!
 ---
 <br/>
 
@@ -145,6 +151,106 @@ We introduce here this kind of data formatting for web-transmissions by presenti
 }
 ```
 ---
+<br/>
+
+## What's the workflow about
+
+App engine is made of two main developer features: the local development web server and the remote public instance of the app.
+These are your working environments, the first one is for programming/testing only purpose, the second is the official/production 
+app folk is going to enjoy. 
+This is a common pattern to work with App Engine:
+
+
+* develop locally with SDK: a real appengineer should avoid using the laucher (; the command line is much more reliable and let you follow
+any operation's flow directly on the console.
+** find your local instance at http://localhost:8080 and test
+** find your admin console at http://localhost:8000
+* deploy your code to Google Cloud
+* manage and control your app through [appengine admin panel](https://appengine.google.com)
+
+
+
+After having installed Python and the SDK:
+* use the [appengine admin panel](https://appengine.google.com) to register your app
+* copy the new_project_template directory from the SDK directory to a place you want to develop your new app (ex. **/develop/myapp/**)
+
+Inside this directory you will find your `app.yaml`, set the name of your app.
+Everything about the app.yaml file can be found [here](https://developers.google.com/appengine/docs/python/config/appconfig)
+
+From your app directory, you can run (you need the python path, Python installer should have done it for you, and the app engine path in your system environment variables.
+For any need you could have, refer to [documentation](https://developers.google.com/appengine/docs/python/) ):
+* [dev_appserver.py](https://developers.google.com/appengine/docs/python/tools/devserver): it's the local instance of the app, where you are goin to work most of the time doing your adjustments
+* [appcfg.py](https://developers.google.com/appengine/docs/python/tools/uploadinganapp): you will use for configuring/uploading/downloading 
+ your app and source code
+* [bulkloader](https://developers.google.com/appengine/docs/python/tools/uploadingdata): usefull to upload/download datastore data to/from the remote instance
+
+
+For example (from the **/develop/** directory):
+* the command:
+```
+python appcfg.py update myapp
+```
+will update the remote code (deploy) the app.
+
+* the command:
+```
+python dev_appserver.py myapp
+```
+*myapp* maps the name in the [app.yaml](https://developers.google.com/appengine/docs/python/config/appconfig) file. `dev_appserver.py` command will look into `app.yaml` entries.
+
+App Engine will perform:
+1. check the `app.yaml` for the main file
+2. read the code in the main file
+
+You local server is up, and will respond to request at http://localhost:8080
+
+## Inside the App
+
+`main.py` is the entry-point of the app (as written in the `app.yaml`). The file where any behaviour of the program is defined.
+This is a skeleton app:
+
+```
+# Import Libraries
+import webapp2
+from google.appengine.ext.webapp import template
+import os.path
+
+# Method In The Wild
+def render_template(self, view_filename, params=None):
+        if not params:
+          params = {}
+        path = os.path.join(os.path.dirname(__file__), '../../views', view_filename)
+        self.response.out.write(template.render(path, params))
+
+# Handler        
+class Index(webapp2.RequestHandler):
+    def get(self):
+       return render_template('index.html')
+
+app = webapp2.WSGIApplication([
+    # Definition Of Routing
+    webapp2.Route('/', Index)
+], debug=TRUE)
+
+```
+
+This short introduction let us experience what is the flow from/to the App Engine instance.
+As we said, once you uploaded the code it will be hosted and served by Google inside the App Engine PaaS.
+
+If you start the development server, it is served locally, only for you to access and test the code.
+
+When you app url is inquired, locally or remotely:
+1. A **client** (usually a browser) send a request to a **server** pointing the server's URL.
+2. The server receives the request and passes it to the app **dispatcher** (in our case the webapp2's dispatcher)
+3. The dispacher, through its libraries, check the **routing** of the app
+## the section 'Definition Of Routing' is a mapper of URI to **handlers**
+4. The routing asks a **handler** (a Python class in this case) to start the computation to respond the request
+5. The handler does its job and respond properly (in our case with a **template** page)
+6. Hopefully the user gets what he/she asked for on his/her browser window
+
+
+
+
 
 Python console 
 
