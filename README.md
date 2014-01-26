@@ -15,12 +15,13 @@ To know a little more about Python you can read this really great articles:
 
 I just find Python to be more productive and fit for solo developing, easy to find docs and examples, and really tuned to OpenSource community. A lot of free books can be found on the Internet, to learn to be a better Python programmer. It is also proved that Python is the most [newbie-friendly programming language](http://stackoverflow.com/questions/3088/best-ways-to-teach-a-beginner-to-program)... probably (:
 
-This course is based on the experience made with:
+This course is based on the experiences made with:
 
 * [Udacity CS253 course](https://www.udacity.com/course/cs253)
 * [Programming Google App Engine second edition](http://shop.oreilly.com/product/9780596522735.do)
 
 Thanks!
+
 ---
 <br/>
 
