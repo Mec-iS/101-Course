@@ -252,13 +252,15 @@ When you app url is inquired, locally or remotely:
 Now we should have an idea about how our App Engine does its job. Most of the Web works this way, with clients-servers requesting and responding
 each other over the waves/wires. In this course we choosed to work with the weapp2 framework, but many other Python frameworks
 can be used over the Google infrastructure. Recently, with the Google Cloud service, you can run any framework with any language
-running your own instance in the cloud. The Google App Engine Pass instead let you choose on a [large variety](https://cloud.google.com/products/app-engine/):
+running your own instance in the cloud. The Google App Engine PaaS instead let you choose on a [large variety](https://cloud.google.com/products/app-engine/):
 * Python
 * Java
 * PHP
 * Go
 
 Now you should have gotten something about how your local and remote *virtual environments* work.
+
+The Datastore can be bind to this skeleton, importing the right libraries. The data stored into can be retrieved, processed and presented to the user by the Datastore API. We'll see how later on. 
 
 ---
 <br/>
