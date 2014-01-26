@@ -243,13 +243,27 @@ When you app url is inquired, locally or remotely:
 
 1. A **client** (usually a browser) send a request to a **server** pointing the server's URL.
 2. The server receives the request and passes it to the app **dispatcher** (in our case the webapp2's dispatcher)
-3. The dispacher, through its libraries, check the **routing** of the app. The section 'Definition Of Routing' is a mapper of URI to **handlers**
+3. The dispacher, through its libraries, check the **routing** of the app. The section **Definition Of Routing** is a mapper from URI to **handlers**
 4. The routing asks a **handler** (a Python class in this case) to start the computation to respond the request
-5. The handler does its job and respond properly (in our case with a **template** page)
+5. The handler does its job and respond properly (in our case with a **template** page called *index.html*)
 6. Hopefully the user gets what he/she asked for on his/her browser window
 
+Now we should have an idea about how our App Engine does its job. Most of the Web works this way, with clients-servers requesting and responding
+each other over the waves/wires. In this course we choosed to work with the weapp2 framework, but many other Python frameworks
+can be used over the Google infrastructure. Recently, with the Google Cloud service, you can run any framework with any language
+running your own instance in the cloud. The Google App Engine Pass instead let you choose on a [large variety](https://cloud.google.com/products/app-engine/):
+* Python
+* Java
+* PHP
+* Go
 
+Now you should have gotten something about how your local and remote *virtual environments* work.
+---
+<br/>
 
+## Let's get your hands dirt with engines' grease
+
+ 
 
 
 Python console 
