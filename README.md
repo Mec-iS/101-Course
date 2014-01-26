@@ -240,10 +240,10 @@ As we said, once you uploaded the code it will be hosted and served by Google in
 If you start the development server, it is served locally, only for you to access and test the code.
 
 When you app url is inquired, locally or remotely:
+
 1. A **client** (usually a browser) send a request to a **server** pointing the server's URL.
 2. The server receives the request and passes it to the app **dispatcher** (in our case the webapp2's dispatcher)
-3. The dispacher, through its libraries, check the **routing** of the app
-** the section 'Definition Of Routing' is a mapper of URI to **handlers**
+3. The dispacher, through its libraries, check the **routing** of the app. The section 'Definition Of Routing' is a mapper of URI to **handlers**
 4. The routing asks a **handler** (a Python class in this case) to start the computation to respond the request
 5. The handler does its job and respond properly (in our case with a **template** page)
 6. Hopefully the user gets what he/she asked for on his/her browser window
