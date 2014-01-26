@@ -262,6 +262,14 @@ Now you should have gotten something about how your local and remote *virtual en
 
 The Datastore can be bind to this skeleton, importing the right libraries. The data stored into can be retrieved, processed and presented to the user by the Datastore API. We'll see how later on. 
 
+So:
+1. copy the SDK's template dir somewhere
+2. configure the `app.yaml` with your app's name
+3. copy the code in the `main.py`
+4. run the development server with the `python` command via the App Engine's command-line tools
+5. check in your browser your local instance running at http://localhost:8080
+6. complain with the teacher and ask kindly if something is not working
+
 ---
 <br/>
 
