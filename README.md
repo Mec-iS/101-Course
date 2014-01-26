@@ -156,7 +156,7 @@ We introduce here this kind of data formatting for web-transmissions by presenti
 
 ## What's the workflow about
 
-App engine is made of two main developer features: the local development web server and the remote public instance of the app.
+App engine is made of two main developing features: the local development web server and the remote public instance of the app.
 These are your working environments, the first one is for programming/testing only purpose, the second is the official/production 
 app folk is going to enjoy. 
 This is a common pattern to work with App Engine:
